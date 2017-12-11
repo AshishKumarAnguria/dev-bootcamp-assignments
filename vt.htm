@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+       <title>My First HTML</title>
+<style>
+.hdg1{
+text-align:center;
+color:red;
+border-bottom:5px  solid orange;
+background-color:yellow;
+font-size:50px;
+}
+
+.hdg2{
+text-align:left;
+color:gold;
+border-bottom:3px solid gold;
+background-color:Fuchsia ;
+font-size:45px;}
+
+.button1{
+background-color:Red;
+border:none;
+color:gold;
+padding:20px;
+text-align:center;
+font-size:25px;
+margin:4px 2px;
+cursor:pointer;
+border-radius:12px;
+}
+
+body{
+background-image:url('hh.jpg');
+background-size:cover;
+background-attachment:fixed;
+background-color:transparent;
+
+
+}
+.pg{
+color:purple;
+font-size:35px;
+
+}
+
+#s01{
+font-size=35px;}
+
+div.box{
+text-align:center;}
+
+</style>
+</head>
+<body>
+<h1 class='hdg1'>VISHWANATH TEMPLE(BHU)</h1>
+
+<p  style="color:Indigo;font-size:35px;"><span style="color:red">Shri Vishwanath Mandir </span>, also known as Vishwanath Mandir, Vishwanath Temple, New Vishwanath Temple and Birla Temple is one of the most famous temples and biggest tourist attractions in the holy city of Varanasi. The temple is situated in Benaras Hindu University and is dedicated to the Lord Shiva. Shri Vishwanath Mandir has the tallest temple tower in the world</p>
+<br>
+<div class="box">
+<table style="padding:15px;font-size:30px; align:center;width:100%;" >
+<tr  style="background-color:DarkSlateBlue ;color:cyan;border-bottom:10px solid yellow;"><th>CONTENT</th></tr>
+<tr  style="background-color:tomato;"><td ><a href=#1>1.History</a></td></tr>
+<tr  style="background-color:lightpink;"><td><a href=#2>2.Construction</a></td></tr>
+<tr style="background-color:Moccasin;"><td><a href=#3>3.Location</a></td></tr>
+<tr style="background-color:palegreen;"><td><a href=#4>4.Gallery</a></td></tr>
+</table>
+</div>
+
+<br>
+<br>
+
+<h1 class='hdg2' id="1">History</h1>
+<p class='pg'>Shri Kashi Vishwanath Mandir, was destroyed (and reconstructed) several times; in 1194 by Qutb-ud-din Aibak, between 1447-1458 by Hussain Shah Sharqi and then in 1669 CE by Aurangzeb. In 1930s, Pandit Madan Mohan Malaviya planned to replicate Shri Kashi Vishwanath Mandir in the campus of Benaras Hindu University. The Birla family undertook the construction and foundation was laid in March 1931. The temple (Shri Vishwanath Mandir) was finally completed in 1966</p>
+
+<h1 class='hdg2' id="2">Construction</h1>
+<p class='pg'>Shri Vishwanath Mandir's construction took thirty-five years to complete (1931-1966). The temple is one of the tallest in India and its tower (Shikhara) is the tallest in the world. Total height of the temple is 77 meters (253 feet). Temple's design was inspired by Shri Kashi Vishwanath Mandir and is made mostly of marble.
+
+Shri Vishwanath Mandir, although a Lord Shiva temple, consists of nine temples within one temple and is open to people from all castes, religions and religious beliefs. The Shiva temple is in the ground floor and the Lakshmi Narayan and Durga temples are on the first floor. Other temples within Shri Vishwanath Mandir are Nataraj, Mata Parvati, Lord Ganesha, Panchmukhi Mahadev, Lord Hanuman, Saraswati and Nandi. Entire text of Bhagavad Gita and extracts from sacred Hindu scriptures are inscribed with illustrations on the inner marble walls of the temple.</p>
+
+<h1 class='hdg2' id="3">Location</h1>
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(25.266034,82.987847);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbfyUmSnn6awxOeZbLMkgPhRCuNwxYFic&callback=myMap"></script>
+
+<h1 class='hdg2' id="4">Gallery</h1>
+<script>
+function image(n){
+var pic;
+switch(n){
+case 1: pic="vt1.jpg";
+break;
+case 2: pic="vt2.jpg";
+break;
+case 3: pic="vt3.jpg";
+break;
+case 4: pic="vt4.jpg";
+break;
+case 5: pic="vt5.jpg";
+break;
+}
+document.getElementById('myImage').src=pic;
+}
+</script>
+
+<div class="box">
+<img id='myImage' src="vt1.jpg"  width="500" height="500">
+
+<p>
+<button class="button1" type="button" onclick="image(1)"><b>1</b></button>
+<button class="button1" type="button" onclick="image(2)"><b>2</b></button>
+<button class="button1" type="button" onclick="image(3)"><b>3</b></button>
+<button class="button1" type="button" onclick="image(4)"><b>4</b></button>
+<button class="button1" type="button" onclick="image(5)"><b>5</b></button>
+</p>
+</div>
+
+</body>
